@@ -40,7 +40,3 @@ For context, the payload runs on a Teensy 4.0 flight computer (with a BNO055 IMU
 ## A note on the model file
 
 `model_data.h` under the aoa_beamforming folder is large, around 20 MB, because it is the full TFLite model written out as a C array. It pushes fine, but if this repo grows it might be worth moving model blobs to Git LFS.
-
-## Status
-
-The packetiser and the beamsteering logic work, the Kalman filter on the flight computer compiles and runs, and the Pi side has been through an end to end dry run. The open items are mostly on the RF side (confirming the delay lines and doing a full PlutoSDR loopback test) and reconciling a couple of beam angle sets before flight.
